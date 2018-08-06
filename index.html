@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>test</title>
+    <link rel="stylesheet" href="https://unpkg.com/vant/lib/vant-css/index.css">
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+<script src="https://unpkg.com/vant/lib/vant.min.js"></script>
+</head>
+<body>
+  <div id="app">
+  	<van-nav-bar
+	  title="添加农场档案"
+	  right-text="保存"
+	  left-arrow
+	  @click-left="onClickLeft">
+	</van-nav-bar>
+	<div>
+		 <van-cell-group style="border-top: 0;">
+      		<van-cell title="农场名称" value="请填写"></van-cell>
+    	
+      		<van-cell title="农场类型" value="客户农场"  is-link></van-cell>
+    	
+      		<van-cell title="农场位置" value="请选择"  is-link></van-cell>
+    	
+      		<van-cell title="农场面积" />
+      			<van-title slot='亩' name='请选择'/>
+      		</van-cell>
+    	</van-cell-group>
+    	<van-cell-group>
+		  <van-field
+		    placeholder="请填写"
+		    label="用户名"
+		    input-align="right"
+		  />
+</van-cell-group>
+	</div>
+  </div>
+
+<script>
+    new Vue({
+      el: '#app',
+      data:{
+      	
+      },
+      methods:{
+      	onClickLeft(){
+      		console.log(123)
+      	}
+      }
+    });
+</script>
+</body>
+<style>
+.van-nav-bar{
+	background: #009688;
+	color: #fff;
+}
+.van-nav-bar .van-icon,.van-nav-bar__text{
+	color: #fff;
+}
+.van-cell{
+	color: #000;
+	font-size: 16px;
+}
+.van-nav-bar__title{
+	margin: 0;
+	max-width: 46%;
+}
+</style>
+</html>
